@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --main--color: #66BFBF;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  color: color: #40514E;
+}
+
+.top-containers {
+  background-color: rgb(234, 246, 246);
+  position: relative;
+  min-height: 65vh;
+  padding-top: 50px;
+}
+
+.top-containers .top-containers-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 140px;
+}
+
+.top-containers .top-containers-text h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 62px;
+  color: var(--main--color);
+}
+
+.top-containers .cloud-one {
+  position: absolute;
+  top: 160px;
+  left: 180px;
+  width: 175px;
+}
+
+.top-containers .cloud-two {
+  position: absolute;
+  right: 280px;
+  top: 90px;
+  width: 120px;
+}
+
+.top-containers .badr-image {
+  position: absolute;
+  width: 200px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 72%;
+}
+
+.container {
+  padding: 0 70px;
+}
+
+.about-me {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  line-height: 2;
+  width: 65%;
+  text-align: center;
+  margin: auto;
+}
+
+/* Start Skill Section */
+.skills {
+  background-color: #EEE;
+  padding-top: 50px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.skills .skill-box {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  padding: 15px;
+  background-color: #FFF;
+  border-radius: 4px;
+}
+
+.skills .skill-box .skill-name {
+  text-align: center;
+  font-weight: bold;
+  width: 130px;
+  line-height: 30px;
+}
+
+.skills .skill-box .skill-progress {
+  width: 100%;
+  background-color: #dddddd6e;
+  height: 30px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  background-color: var(--main--color);
+  left: 0;
+  top: 0;
+  width: 0%;
+  border-radius: 5px;
+  height: 100%;
+  transition: all .8s;
+}
+
+/* End Skill Section */
+/* Start Project Section */
+.my-projects {
+  padding: 50px;
+  padding-bottom: 100px;
+}
+
+.my-projects h2 {
+  margin: 0 auto 55px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.my-projects .project-boxes {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.my-projects .project-boxes .project-image {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.my-projects .project-boxes .project-image .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.my-projects .project-boxes .project-image .overlay h4 {
+  color: #ffffff;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  transition: all 0.5s ease;
+  text-transform: capitalize;
+}
+
+.my-projects .project-boxes .project-image:hover .overlay {
+  background-color: transparent;
+}
+
+.my-projects .project-boxes .project-image:hover .overlay h4 {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+.my-projects .project-boxes .project-image:not(:last-of-type) {
+  margin-right: 15px;
+}
+
+.my-projects .project-boxes .project-image img {
+  display: block;
+  width: 100%;
+  height: 230px;
+}
